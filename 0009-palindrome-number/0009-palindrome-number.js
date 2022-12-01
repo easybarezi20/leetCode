@@ -4,10 +4,13 @@
  */
 var isPalindrome = function(x) {
     let numToString = x.toString()
-        for(i = 0; i < numToString.length; i++){
-          if(numToString[i] !== numToString[numToString.length - 1 - i]){
-            return false
-          }
-        }
+    let len = numToString.length
+    let i = 0
+    while (i < len){
+      i++
+      if(numToString[i] !== numToString[len - 1 - i]){
+        return false
+      }
+    }
     return true
 };
